@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1003.0" prefWidth="1912.0" styleClass="aproot" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.historycontroller">
+   <children>
+      <AnchorPane fx:id="apfront" prefHeight="62.0" prefWidth="1912.0" styleClass="ap" stylesheets="@application.css">
+         <children>
+            <Label fx:id="labhistory" alignment="CENTER" layoutY="18.0" prefHeight="25.0" prefWidth="94.0" text="History" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <HBox fx:id="hboxsearch" layoutX="479.0" layoutY="13.0" prefHeight="37.0" prefWidth="1167.0">
+               <children>
+                  <Button fx:id="btnsearch" mnemonicParsing="false" prefHeight="34.5" prefWidth="38.0" styleClass="btnsearch" stylesheets="@application.css">
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" size="1em" />
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="txtsearch" prefHeight="35.0" prefWidth="1431.0" promptText=" Search history" stylesheets="@application.css">
+                     <styleClass>
+                        <String fx:value="searchbox" />
+                        <String fx:value="searchbox" />
+                        <String fx:value="searchbox" />
+                     </styleClass>  
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <Pane fx:id="hispane" prefHeight="62.0" prefWidth="1912.0" styleClass="panecheck" stylesheets="@application.css" visible="false">
+         <children>
+            <Button fx:id="btncross" layoutX="360.0" layoutY="16.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="24.0" styleClass="btn" stylesheets="@application.css">
+               <graphic>
+                  <FontAwesomeIcon glyphName="REMOVE" />
+               </graphic></Button>
+            <Label fx:id="labselected" layoutX="417.0" layoutY="21.0" prefHeight="21.0" prefWidth="94.0" text="Label" />
+            <Button fx:id="btndelete" layoutX="1700.0" layoutY="19.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="78.0" styleClass="hiscancel" stylesheets="@application.css" text="Delete" textFill="#1a82ed" />
+            <Button fx:id="btncancel" layoutX="1609.0" layoutY="19.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="78.0" styleClass="hiscancel" stylesheets="@application.css" text="Cancel" textFill="#1a82ed" />
+         </children>
+      </Pane>
+      <ScrollPane layoutX="352.0" layoutY="63.0" prefHeight="939.0" prefWidth="1560.0" styleClass="aproot" stylesheets="@application.css">
+         <content>
+            <AnchorPane fx:id="aphis" prefHeight="939.0" prefWidth="1560.0" styleClass="aproot" stylesheets="@application.css">
+               <children>
+                  <VBox fx:id="vroot" prefHeight="939.0" prefWidth="1398.0" styleClass="aproot" stylesheets="@application.css" />
+               </children></AnchorPane>
+         </content></ScrollPane>
+   </children>
+</AnchorPane>
